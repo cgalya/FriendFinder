@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="/../assets/style.css">
+</head>
+<body>
+<div class="wrapper">
+
+  <form>
+
+    <h3><strong>About You</strong></h3>
+    <h4>Name (Required)</h4>
+    <input type="text" name="" id="name" class="form-control" required>
+
+    <h4>Link to Photo Image (Required)</h4>
+    <input type="text" name="" id="photo" class="form-control" required>
+
+    <fieldset>
+      <p>Do you sleep around 90% of the day?</p>
+      <input type="radio" name="sleep" value="1"> 1
+      <input type="radio" name="sleep" value="2"> 2
+      <input type="radio" name="sleep" value="3"> 3
+      <input type="radio" name="sleep" value="4"> 4
+      <input type="radio" name="sleep" value="5"> 5
+    </fieldset>
+
+    <fieldset>
+      <p>Do you like to sit in boxes?</p>
+      <input type="radio" name="box" value="1"> 1
+      <input type="radio" name="box" value="2"> 2
+      <input type="radio" name="box" value="3"> 3
+      <input type="radio" name="box" value="4"> 4
+      <input type="radio" name="box" value="5"> 5
+    </fieldset>
+
+    <fieldset>
+      <p>Do you push items off of tables over and over again just to see what will happen?</p>
+      <input type="radio" name="tables" value="1"> 1
+      <input type="radio" name="tables" value="2"> 2
+      <input type="radio" name="tables" value="3"> 3
+      <input type="radio" name="tables" value="4"> 4
+      <input type="radio" name="tables" value="5"> 5
+    </fieldset>
+
+    <fieldset>
+      <p>Do you love killing all the things?</p>
+      <input type="radio" name="killing" value="1"> 1
+      <input type="radio" name="killing" value="2"> 2
+      <input type="radio" name="killing" value="3"> 3
+      <input type="radio" name="killing" value="4"> 4
+      <input type="radio" name="killing" value="5"> 5
+    </fieldset>
+
+    <fieldset>
+      <p>Do you understand that you'll never catch the light from a laser pointer?</p>
+      <input type="radio" name="laser" value="1"> 1
+      <input type="radio" name="laser" value="2"> 2
+      <input type="radio" name="laser" value="3"> 3
+      <input type="radio" name="laser" value="4"> 4
+      <input type="radio" name="laser" value="5"> 5
+    </fieldset>
+
+    <fieldset>
+      <p>Do you like to snuggle in and get hair all over a basket of fresh, clean laundry?</p>
+      <input type="radio" name="laundry" value="1"> 1
+      <input type="radio" name="laundry" value="2"> 2
+      <input type="radio" name="laundry" value="3"> 3
+      <input type="radio" name="laundry" value="4"> 4
+      <input type="radio" name="laundry" value="5"> 5
+    </fieldset>
+
+    <fieldset>
+      <p>Do you love pouncing on things?</p>
+      <input type="radio" name="pouncing" value="1"> 1
+      <input type="radio" name="pouncing" value="2"> 2
+      <input type="radio" name="pouncing" value="3"> 3
+      <input type="radio" name="pouncing" value="4"> 4
+      <input type="radio" name="pouncing" value="5"> 5
+    </fieldset>
+
+    <fieldset>
+      <p>Do you enjoy scratching furniture?</p>
+      <input type="radio" name="furniture" value="1"> 1
+      <input type="radio" name="furniture" value="2"> 2
+      <input type="radio" name="furniture" value="3"> 3
+      <input type="radio" name="furniture" value="4"> 4
+      <input type="radio" name="furniture" value="5"> 5
+    </fieldset>
+
+    <fieldset>
+      <p>Are you cuddly and yet surprisingly sharp at the same time?</p>
+      <input type="radio" name="pointy" value="1"> 1
+      <input type="radio" name="pointy" value="2"> 2
+      <input type="radio" name="pointy" value="3"> 3
+      <input type="radio" name="pointy" value="4"> 4
+      <input type="radio" name="pointy" value="5"> 5
+    </fieldset>
+
+    <fieldset>
+      <p>Do you like to wake humans up by scratching their faces?</p>
+      <input type="radio" name="faces" value="1"> 1
+      <input type="radio" name="faces" value="2"> 2
+      <input type="radio" name="faces" value="3"> 3
+      <input type="radio" name="faces" value="4"> 4
+      <input type="radio" name="faces" value="5"> 5
+    </fieldset>
+
+    <div id="button">
+      <button type="submit" id="submit">Submit</button>
+    </div>
+
+  </form>
+
+</div>
+
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="matchName"></h2>
+    <img id="matchImg" src="" alt="">
+  </div>
+
+</div>
+
+</body>
+
+<style>
+  body {
+    font-size: 16px;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    /*width: 20em;*/
+  }
+
+  fieldset {
+    border: none;
+  }
+
+  input[type="text"] {
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid #000;
+    outline: none;
+  }
+
+  input[type="radio"] {
+    margin-left: 1.5em;
+  }
+
+  #submit {
+    border: none;
+  }
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+
+<script src="https://code.jquery.com/jquery.js"></script>
+<script>
+
+  $("#myModal").hide();
+
+  $("#submit").on("click", function () {
+    var scores = [];
+    var radioNames = [];
+
+    // Form validation
+    function validateForm() {
+      var validate = true;
+      var names = [];
+      var counter = 0;
+      $('input:radio').each(function () {
+        var rname = $(this).attr('name');
+        if ($.inArray(rname, names) == -1) names.push(rname);
+      });
+
+      $.each(names, function (i, name) {
+        if ($('input[name="' + name + '"]:checked').length == 0) {
+          counter++;
+        }
+      });
+      if (counter > 0) {
+        validate = false;
+      }
+
+      $('.form-control').each(function () {
+        if ($(this).val() === '')
+          validate = false;
+      });
+      return validate;
+    }
+
+//    }
+    if (validateForm() == true) {
+      $('input:radio').each(function () {
+        var rname = $(this).attr('name');
+        if ($.inArray(rname, radioNames) == -1) radioNames.push(rname);
+      });
+
+      $.each(radioNames, function (i, name) {
+        scores.push($('input[name="' + name + '"]:checked').val());
+      });
+      var userData = {
+        name: $("#name").val(),
+        photo: $("#photo").val(),
+        scores: scores
+      }
+
+//    }
+//
+//
+      // Grab the URL of the website
+      var currentURL = window.location.origin;
+
+      // AJAX post the data to the friends API.
+      $.post(currentURL + "/api/friends", userData, function(data){
+        console.log(userData);
+        // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+        $("#matchName").text(data.name);
+        $('#matchImg').attr("src", data.photo);
+
+        console.log("photo", data.photo);
+
+        // Show the modal with the best match
+        $("#myModal").show();
+
+      });
+    }
+    else
+    {
+      alert("Please fill out all fields before submitting!");
+    }
+
+    return false;
+  });
+
+  //  $("#submit").click(function() {
+  //    var userData = {
+  //      name: $("#name").val(),
+  //      photo: $("#photo").val(),
+  //      scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val(), ]
+  //    }
+  //    console.log($("input[type='radio'][name='sleep']:checked").val());
+  //  })
+
+
+</script>
+</html>
