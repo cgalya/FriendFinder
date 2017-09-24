@@ -1,8 +1,30 @@
 body {
   font-size: 16px;
+  background-image: url("images/cat-heart.jpg");
+  background-size: cover;
+  color: #fff;
 }
 
-.wrapper {
+
+
+h3, h4 {
+  color: #ccbc66;
+}
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+#surveybtn {
+  outline: none;
+  border: none;
+}
+
+/*####################### SURVEY PAGE ########################*/
+.survey-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,11 +41,17 @@ fieldset {
   border: none;
 }
 
+fieldset p {
+  color: #ddb1cb;
+}
+
 input[type="text"] {
   border: none;
   box-shadow: none;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #503409 !important;
   outline: none;
+  background: #5a977f;
+  font-size: 1em;
 }
 
 input[type="radio"] {
