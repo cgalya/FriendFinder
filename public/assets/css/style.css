@@ -1,0 +1,190 @@
+/*base body settings*/
+body {
+  font-size: 16px;
+  background: #C47145;
+  background-size: cover;
+  font-family: 'Raleway', sans-serif;
+}
+
+/*########################### HOME PAGE ###########################*/
+
+/*whole page wrapper div*/
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/*center content div*/
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #DAD3CF;
+  border: 20px solid #CEA58F;
+  padding: 20px;
+}
+
+/*main title*/
+.home-container h1 {
+  color: #A83B00;
+}
+
+/*main subtitles*/
+.home-container h3 {
+  color: #5a5959;
+  margin-top: 0px;
+}
+
+/*main cat cartoon*/
+.home-container img {
+  margin-bottom: 10px;
+}
+
+/*links at bottom of main section*/
+.home-container a {
+  text-decoration: none;
+  color: #5a5959;
+}
+
+/*button to go to the survey*/
+#surveybtn {
+  outline: none;
+  border: none;
+  background: #CEA58F;
+  color: #A83B00;
+  padding: 7px;
+  border-radius: 8px;
+}
+
+/*####################### SURVEY PAGE ########################*/
+
+/*whole page wrapper div*/
+.survey-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*form styling*/
+form {
+  display: flex;
+  flex-direction: column;
+  background: #DAD3CF;
+  margin: 0 20px;
+  padding: 20px;
+  border: 20px solid #CEA58F;
+  color: #5a5959;
+  /*width: 20em;*/
+}
+
+/*form title*/
+form h2 {
+  text-align: center;
+  color: #A83B00;
+}
+
+/*form subtitles*/
+form h4 {
+  margin: 10px 0px;
+}
+
+/*remove default border from fieldset groups*/
+fieldset {
+  border: none;
+}
+
+/*text input box styling*/
+input[type="text"] {
+  border: none;
+  box-shadow: none;
+  border-bottom: 1px solid #5a5959 !important;
+  outline: none;
+  background: #DAD3CF;
+  font-size: 1em;
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+
+/*div containing radio button groups*/
+.radiobtns {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+/*radio button spacing*/
+input[type="radio"] {
+  margin-left: 20px;
+  margin-right: 5px;
+}
+
+/*div containing form image*/
+.media {
+  min-width: 0;
+  margin: 5px;
+  text-align: center;
+}
+
+/*image just before submit button*/
+form img {
+  width: 450px;
+  max-width: 100%;
+  max-height: 450px;
+}
+
+/*div containing submit survey button*/
+#button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/*submit survey button*/
+#submit {
+  outline: none;
+  border: none;
+  background: #CEA58F;
+  color: #A83B00;
+  padding: 7px;
+  border-radius: 8px;
+  align-item: center;
+}
+
+/* transparent overlay for modal */
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* modal content box */
+.modal-content {
+  background: #DAD3CF;
+  padding: 20px;
+  border: 1px solid #888;
+  color: #A83B00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/*friend picture for modal*/
+.modal-content img {
+  width: 450px;
+  max-width: 100%;
+  max-height: 450px;
+}

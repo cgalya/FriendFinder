@@ -1,25 +1,19 @@
-// Your apiRoutes.js file should contain two routes:
-//     A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
-//     A POST routes /api/friends. This will be used to handle incoming survey results. This route will also be used to
-// handle the compatibility logic.
 
-var path = require("path");
+// link to the friends.js data file
 var friends = require("../data/friends");
 
 module.exports = function (app) {
 
+  // when the user visits the url plus /api/friends, they are shown the friends array of json objects
   app.get("/api/friends", function (req, res) {
     res.json(friends);
   });
 
+  // when the user submits the survey form, the data is pushed to the friends array in json format and their
+  // information is compared with the existing friends array to find the best friend match
   app.post("/api/friends", function (req, res) {
     var userInput = req.body;
     var userScores = userInput.scores;
-
-    var newFriend = {
-      //how does userInput get sent? do i need to create a new object for it or is it already one and i can just push it
-      // to friends
-    }
 
     var bestCat = {
       "name": "",
@@ -27,6 +21,8 @@ module.exports = function (app) {
       "matchScore": 100000
     }
 
+    // comparing user submitted scores with the scores of the cats in the friends array and filling in the values of
+    // bestCat to send back to the user as the best friend match
     for (var i = 0; i < friends.length; i++) {
       var diff = 0;
       for (var j = 0; j < userScores.length; j++) {
@@ -39,6 +35,9 @@ module.exports = function (app) {
       }
 
     }
+    // add the user to the friends array
+    friends.push(userInput);
+    // send the best cat match back to the user
     res.json(bestCat);
   });
 };

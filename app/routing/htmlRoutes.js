@@ -1,20 +1,17 @@
-// Your htmlRoutes.js file should include two routes:
-//     A GET Route to /survey which should display the survey page.
-//     A default, catch-all route that leads to home.html which displays the home page.
 
-
+// path npm package gets the correct file path for html
 var path = require('path');
 
 module.exports = function (app) {
-  app.get("/", function (req, res) {
-    //res.sendFile(path.join(__dirname, "../../public/survey.html"));
-    res.redirect(301, 'http://localhost:3000/home.html');
+
+  // when a user visits the url plus /survey, they are shown the survey.html file
+  app.get("/survey", function (req, res) {
+    res.sendFile(path.join(__dirname, "../../public/survey.html"));
   });
+
+  // this is a catch all route for any additions to the basic url (except /survey) and sends the user to the
+    // home.html file
   app.get("*", function (req, res) {
-    //res.sendFile(path.join(__dirname, "../../public/survey.html"));
-    res.redirect(301, 'http://localhost:3000' + req.originalUrl + '.html');
+    res.sendFile(path.join(__dirname, "../../public/home.html"));
   });
-  // app.get("*", function (req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/home.html"));
-  // });
 };

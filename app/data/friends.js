@@ -1,3 +1,6 @@
+
+// array of json objects containing the list of cat friends already in friend finder
+
 var friends = [
   {
     "name": "Mittens",
